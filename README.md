@@ -37,7 +37,6 @@
 ### something need to be done
 - [ ] 未实现前后端解耦
 - [ ] Server端缺少Model部分
-- [ ] 由于涉及的工程为SPA，controller非常薄，就直接放在了router里，故而脚手架中没有细分出controller
 - [ ] 使用egg-logger处理日志，出现空error文件，核心问题在于egg-logger中对stream进行error监听，暂时未找到好的解决方案
 ``` JavaScript
       mkdirp.sync(path.dirname(this.options.file));
