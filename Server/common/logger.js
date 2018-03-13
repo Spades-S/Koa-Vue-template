@@ -1,10 +1,14 @@
-const config = require('../config')
-const Logger = require('egg-logger').Logger
-const FileTransport = require('egg-logger').FileTransport
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const ConsoleTransport = require('egg-logger').ConsoleTransport
+const FileTransport = require('egg-logger').FileTransport
+const Logger = require('egg-logger').Logger
+const path = require('path')
 const utils = require('utility')
 
-const path = require('path')
+
+const config = require('../config')
+
 
 function fileFormatter(content) {
     return content.date + '  ' + content.level + '  ' + content.pid + '  ' + content.message

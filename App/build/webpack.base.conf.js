@@ -1,6 +1,9 @@
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const config = require('../config')
 const resolve = require('./utils').resolve
 const VueLoaderConf = require('./vue-loader.conf')
+
 module.exports = {
     context: resolve('../'),
     entry: {

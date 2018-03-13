@@ -1,24 +1,29 @@
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const koa = require('koa')
+const Router = require('koa-router')
+
 const config = require('../config')
 const init = require('../common/init')
-const middlewares = require('koa-middlewares')
 const setRouters = require('../router')
 
 
 const app = new koa()
-const router = middlewares.router()
+const router = new Router()
 setRouters(router)
 
 init(app)
 
 
-app.use(middlewares.logger())
-app.use(middlewares.staticCache(config.staticPath, {
-    buffer: config.debug ? false : true,
+app.use(require('koa-logger')())
+app.use(require('koa-static')(config.staticPath, {
     maxAge: config.debug ? 0 : 60 * 60 * 24 * 7,
     gzip: config.enableCompress
 }))
-app.use(middlewares.bodyParser())
+app.use(require('koa-body')({
+    multipart: 'true'
+}))
+
 app.use(router.routes())
     .use(router.allowedMethods());
 

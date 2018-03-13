@@ -1,6 +1,10 @@
-const path = require('path')
-const config = require('../config')
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path')
+
+const config = require('../config')
+
 
 exports.resolve = function (dir) {
     return path.resolve(__dirname, dir)

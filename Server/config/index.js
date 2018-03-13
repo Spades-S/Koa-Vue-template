@@ -1,3 +1,5 @@
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const path = require('path')
 
 module.exports = {

@@ -1,9 +1,13 @@
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 process.env.NODE_ENV = 'development'
-const baseWebpackConf = require('./webpack.base.conf')
-const config = require('../config')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 const WebpackMerge = require('webpack-merge')
+
+const baseWebpackConf = require('./webpack.base.conf')
+const config = require('../config')
 const utils = require('./utils')
 
 

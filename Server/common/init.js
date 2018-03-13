@@ -1,7 +1,11 @@
-const config = require('../config')
-const Logger = require('./logger')
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 const KoaNunjucks = require('koa-nunjucks-2')
 const onerror = require('koa-onerror')
+
+const config = require('../config')
+const Logger = require('./logger')
+
 
 
 module.exports = function (app) {

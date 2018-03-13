@@ -1,11 +1,12 @@
-
+// created by Spades <spadesge@gmail.com> on 18/3/13
 
 require('shelljs/global')
-const config = require('../config')
 const chalk = require('chalk')
+const Webpack = require('webpack')
+
+const config = require('../config')
 const ora = require('ora')
 const prodWebpackConf = require('./webpack.prod.conf')
-const Webpack = require('webpack')
 
 
 var spinner = ora('build for production ... ')

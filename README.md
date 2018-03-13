@@ -12,12 +12,12 @@
    '    |   |-- config  => 工程配置文件
    '    |   |-- src  => 前端源文件目录
    '    |   |-- static   => 静态资源文件目录
-   '    |-- Server  => 后盾
+   '    |-- Server  => 后端
    '        |-- common  => 初始化文件目录
    '        |-- config  => 工程配置文件
    '        |-- logs  => 日志输出文件
    '        |-- router  => 路由
-   '        |-- servers  => server服务
+   '        |-- service  => server服务
    '        |-- static  => App 生产环境生产的静态资源(css | js)存放目录，以供部署使用
    '        |-- view  =>  App生产环境生产的静态资源(html)存放目录，以供部署使用
 ```
@@ -36,7 +36,6 @@
 
 ### something need to be done
 - [ ] 未实现前后端解耦
-- [ ] Server端缺少Model部分
 - [ ] 使用egg-logger处理日志，出现空error文件，核心问题在于egg-logger中对stream进行error监听，暂时未找到好的解决方案
 ``` JavaScript
       mkdirp.sync(path.dirname(this.options.file));

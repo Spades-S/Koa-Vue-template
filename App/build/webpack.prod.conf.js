@@ -1,16 +1,19 @@
+// created by Spades <spadesge@gmail.com> on 18/3/13
+
 process.env.NODE_ENV = 'production'
 
-const baseWebpackConf = require('./webpack.base.conf')
-const config = require('../config')
-const utils = require('./utils')
-const Webpack = require('webpack')
-const WebpackMerge = require('webpack-merge')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyjsPlugin = require('uglifyjs-webpack-plugin')
+const Webpack = require('webpack')
+const WebpackMerge = require('webpack-merge')
+
+const baseWebpackConf = require('./webpack.base.conf')
+const config = require('../config')
+const utils = require('./utils')
 
 const prodWebpackConf = {
     module: {
