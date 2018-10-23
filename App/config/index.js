@@ -7,17 +7,12 @@ function resolve(dir) {
 }
 
 module.exports = {
-    assetsRoot: resolve('../../Server/static'),
+    distDir: resolve('../dist'),
     build: {
-        node_env: 'production',
         cssSourceMap: true,
         usePostCss: false,
-        devtool: 'source-map',
-        index: resolve('../../Server/view/index.html'),
-        productionGzip: false
     },
     dev: {
-        node_env: 'development',
         cssSourceMap: true,
         usePostCss: false
     },

@@ -12,6 +12,7 @@ const utils = require('./utils')
 
 
 const devWebpackConf = {
+    mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
         compress: true,
@@ -27,16 +28,9 @@ const devWebpackConf = {
         })
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html',
-            filename: 'index.html',
-            inject: true
-        }),
         new Webpack.HotModuleReplacementPlugin(),
         new Webpack.NamedModulesPlugin(),
     ]
 }
 
 module.exports = WebpackMerge(baseWebpackConf, devWebpackConf)
-
-
